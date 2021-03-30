@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- TODO: Include Font Awesome file here -->
+    <!-- TODO: Include Google Fonts file here -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montez|Roboto|Ubuntu+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"
+        type="text/css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="../style/common.css" />
+    <link rel="stylesheet" type="text/css" href="../style/postslist.css" />
+
+
+</head>
+
+<body style=" background-color: #ffa31a;">
+    <!-- TODO: Include code for header here -->
+    <div class="header">
+        <div class="bg-signin">
+            <button type="button" class="signinupbutton" data-toggle="modal" data-target="#exampleModal"
+                id="sign-in-button">
+                Sign In
+            </button>
+
+            <button type="button" class="signinupbutton" data-toggle="modal" data-target="#exampleModalSignUp"
+                id="sign-up-button">
+                Sign Up
+            </button>
+        </div>
+
+        <a id="pageTitle" class="logo-title">ScriBBler</a>
+        <p class="sub-heading">Explore, Imagine, Create</p>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="exampleModalLabel"
+                            style="color:grey;font-family: 'Roboto', sans-serif;font-size: larger;">Welcome Back !</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="exampleInputUsername">Username</label>
+                                <input type="text" class="form-control" id="exampleInputUsername"
+                                    aria-describedby="usernameHelp" placeholder="Enter your username"
+                                    style="background-color :#DCDCDC ;" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Password</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1"
+                                    placeholder="Enter your password" style="background-color :#DCDCDC ;" required>
+                            </div>
+                            <div class="modal-signin-container">
+                                <button type="submit" class="btn btn-success btn-block">Sign In</button>
+                            </div>
+                            <div class="modal-footer border-top-0 d-flex justify-content-center">
+                                Not a member ? <a data-target="#exampleModalSignUp" data-dismiss="modal"
+                                    data-toggle="modal" href="#signup-form"> Sign Up</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModalSignUp" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="exampleModalLabel"
+                            style="color:grey;font-family: 'Roboto', sans-serif;font-size: larger;">Get Started</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" class="form-control" id="name" placeholder="Enter your name"
+                                    style="background-color : 	#DCDCDC ;" required>
+
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputUsername1">Username</label>
+                                <input type="text" class="form-control" id="exampleInputUsername1"
+                                    aria-describedby="emailHelp" placeholder="Enter your username"
+                                    style="background-color :#DCDCDC ;" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Password</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1"
+                                    placeholder="Enter your password" style="background-color :#DCDCDC ;" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Confirm Password</label>
+                                <input type="password" class="form-control" id="exampleInputPassword2"
+                                    placeholder="Re-enter your Password" style="background-color :#DCDCDC ;" required>
+                            </div>
+
+                            <div class="modal-signin-container">
+                                <button type="submit" class="btn btn-success btn-block">Sign Up</button>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ATTENTION: The HTML code for the list of posts has been given to you. You can feel free to add/delete/modify this code. You need to write the proper CSS and JavaScript code corresponding to this page so that the result looks like the screenshots given to you in the Project Statement. -->
+
+    <!-- list of all posts starts here -->
+
+    <div class="container">
+
+        <!-- post 1 starts here -->
+
+
+        <div class="card-new" id="card1">
+
+            <div class="side-square-wrapper">
+                <span class="side-square-wrapper-content" id="author1"> Radhika Mittal</span>
+
+            </div>
+            <div class="custom-card-body">
+                <div>
+                    <div class="card-body-heading">
+                        <span class="card-body-heading-content" id="heading1">Something About DBMS or Database</span>
+                        <span class="trash-button" data-toggle="modal" data-target="#modalConfirmYesNo1">
+                            <!-- TODO: Include Font Awesome icon for delete icon here -->
+                            <i class="fa fa-trash fa-lg"></i>
+                        </span>
+                    </div>
+
+                </div>
+                <div class="post-text" id="content1">A database is an organized collection of data, generally stored and 
+                    accessed electronically from a computer system. 
+                    Where databases are more complex they are often developed using formal design and modeling techniques.
+                    The database management system (DBMS) is the software that interacts with end users, applications, 
+                    and the database itself to capture and analyze the data.</div>
+
+                <!-- TODO: Include Font Awesome icon for horizontal ellipsis icon here -->
+                <span class="ellipsis" onclick="openPost(author1,heading1,content1)">
+
+                    <i style="font-size:24px" class="fa">&#xf141;</i>
+                </span>
+
+            </div>
+            <!--- Delete card modal-->
+            <div id="modalConfirmYesNo1" class="modal fade">
+                <div class="modal-dialog " style="height: 15px; width:350px;">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 id="lblTitleConfirmYesNo" class="modal-title" style="font-size: 15px;">
+                                Are you sure you want to delete this post?</h4>
+
+                        </div>
+
+                        <div class="modal-footer">
+                            <button id="btnYesConfirm" type="button" class="btn btn-success"
+                                style="margin-right: 200px;" data-dismiss="modal"
+                                onclick="removeCard('card1')">Yes</button>
+                            <button id="btnNoConfirmYesNo" type="button" class="btn btn-danger"
+                                data-dismiss="modal">No</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- post 1 ends here -->
+
+        <!-- post 2 starts here -->
+
+        <div class="card-new" id="card2">
+
+            <div class="side-square-wrapper">
+                <span class="side-square-wrapper-content" id="author2"> Mehak Sharma</span>
+            </div>
+            <div class="custom-card-body">
+                <div>
+                    <div class="card-body-heading">
+                        <span class="card-body-heading-content" id="heading2">What is C++?</span>
+                        <span class="trash-button" data-toggle="modal" data-target="#modalConfirmYesNo2">
+                            <!-- TODO: Include Font Awesome icon for delete icon here -->
+                            <i class="fa fa-trash fa-lg"></i>
+                        </span>
+                    </div>
+
+                </div>
+                <div class="post-text" id="content2">C++ is a general-purpose programming language created by Bjarne Stroustrup as an 
+                    extension of the C programming language, or "C with Classes". The language has expanded significantly over time, and modern 
+                    C++ now has object-oriented,
+                     generic, and functional features in addition to facilities for low-level memory manipulation.</div>
+
+
+                <!-- TODO: Include Font Awesome icon for horizontal ellipsis icon here -->
+                <span class="ellipsis" onclick="openPost(author2,heading2,content2)">
+                    <i style="font-size:24px" class="fa">&#xf141;</i>
+                </span>
+
+            </div>
+            <!--- Delete card modal-->
+            <div id="modalConfirmYesNo2" class="modal fade">
+                <div class="modal-dialog " style="height: 15px; width:350px;">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 id="lblTitleConfirmYesNo" class="modal-title" style="font-size: 15px;">
+                                Are you sure you want to delete this post?</h4>
+
+                        </div>
+
+                        <div class="modal-footer">
+                            <button id="btnYesConfirm" type="button" class="btn btn-success"
+                                style="margin-right: 200px;" data-dismiss="modal"
+                                onclick="removeCard('card2')">Yes</button>
+                            <button id="btnNoConfirmYesNo" type="button" class="btn btn-danger"
+                                data-dismiss="modal">No</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- post 2 ends here -->
+
+        <!-- post 3 starts here -->
+
+
+        <div class="card-new" id="card3">
+
+            <div class="side-square-wrapper">
+                <span class="side-square-wrapper-content" id="author3">
+                    Divya Batish
+                </span>
+            </div>
+            <div class="custom-card-body">
+                <div>
+                    <div class="card-body-heading">
+                        <span class="card-body-heading-content" id="heading3">Something About HTML</span>
+                        <span class="trash-button" data-toggle="modal" data-target="#modalConfirmYesNo3">
+                            <!-- TODO: Include Font Awesome icon for delete icon here -->
+                            <i class="fa fa-trash fa-lg"></i>
+                        </span>
+                    </div>
+
+                </div>
+                <div class="post-text" id="content3"> HTML (HyperText Markup Language) is the standard markup language for documents designed to be displayed in a web browser. 
+                    It can be assisted by technologies such as Cascading Style Sheets (CSS) and scripting languages such as JavaScript.</div>
+
+                <!-- TODO: Include Font Awesome icon for horizontal ellipsis icon here -->
+                <span class="ellipsis" onclick="openPost(author3,heading3,content3)">
+                    <i style="font-size:24px" class="fa">&#xf141;</i>
+                </span>
+
+            </div>
+            <!--- Delete card modal-->
+            <div id="modalConfirmYesNo3" class="modal fade">
+                <div class="modal-dialog " style="height: 15px; width:350px;">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 id="lblTitleConfirmYesNo" class="modal-title" style="font-size: 15px;">
+                                Are you sure you want to delete this post?</h4>
+
+                        </div>
+
+                        <div class="modal-footer">
+                            <button id="btnYesConfirm" type="button" class="btn btn-success"
+                                style="margin-right: 200px;" data-dismiss="modal"
+                                onclick="removeCard('card3')">Yes</button>
+                            <button id="btnNoConfirmYesNo" type="button" class="btn btn-danger"
+                                data-dismiss="modal">No</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <!-- post 3 ends here -->
+        <!-- post 4 starts here -->
+
+
+        <div class="card-new" id="card4">
+
+            <div class="side-square-wrapper">
+                <span class="side-square-wrapper-content" id="author4">
+                    Sakshi Sharma 
+                </span>
+            </div>
+            <div class="custom-card-body">
+                <div>
+                    <div class="card-body-heading">
+                        <span class="card-body-heading-content" id="heading4">What is Java?</span>
+                        <span class="trash-button" data-toggle="modal" data-target="#modalConfirmYesNo4">
+                            <!-- TODO: Include Font Awesome icon for delete icon here -->
+                            <i class="fa fa-trash fa-lg"></i>
+                        </span>
+                    </div>
+
+                </div>
+                <div class="post-text" id="content4">Java is a programming language developed by James Gosling with other team members 
+                    named Mike Sheridan and Patrick Naughton also called as Green Team in 1995 for Sun Microsystems 
+                    for digital devices such as set-top boxes, televisions etc.
+                    It is an object-oriented language similar to C++,
+                     but with advanced and simplified features.This language is free to access and can run on all platforms.</div>
+
+                <!-- TODO: Include Font Awesome icon for horizontal ellipsis icon here -->
+                <div class="ellipsis" onclick="openPost(author4,heading4,content4)">
+                    <i style="font-size:24px" class="fa">&#xf141;</i>
+                </div>
+
+            </div>
+            <!--- Delete card modal-->
+            <div id="modalConfirmYesNo4" class="modal fade">
+                <div class="modal-dialog " style="height: 15px; width:350px;">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 id="lblTitleConfirmYesNo" class="modal-title" style="font-size: 15px;">Are you sure you
+                                want to delete this post?</h4>
+
+
+                        </div>
+
+                        <div class="modal-footer">
+                            <button id="btnYesConfirm" type="button" class="btn btn-success"
+                                style="margin-right: 200px;" data-dismiss="modal"
+                                onclick="removeCard('card4')">Yes</button>
+                            <button id="btnNoConfirmYesNo" type="button" class="btn btn-danger"
+                                data-dismiss="modal">No</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- post 4 ends here -->
+        <!-- post 5 starts here -->
+
+
+        <div class="card-new" id="card5">
+
+            <div class="side-square-wrapper">
+                <span class="side-square-wrapper-content" id="author5">
+                    Ashima Gupta
+                </span>
+            </div>
+            <div class="custom-card-body">
+                <div>
+                    <div class="card-body-heading">
+                        <span class="card-body-heading-content" id="heading5">Facts You should know about Mathematics</span>
+                        <span class="trash-button" data-toggle="modal" data-target="#modalConfirmYesNo5">
+                            <!-- TODO: Include Font Awesome icon for delete icon here -->
+                            <i class="fa fa-trash fa-lg"></i>
+                        </span>
+                    </div>
+
+                </div>
+                <div class="post-text" id="content5">If you ask mathematicians what they do,
+                     you always get the same answer. They think. They think about difficult and unusual problems. 
+                     They do not think about ordinary problems: they just write down the answers.</div>
+
+                <!-- TODO: Include Font Awesome icon for horizontal ellipsis icon here -->
+                <span class="ellipsis" onclick="openPost(author5,heading5,content5)">
+                    <i style="font-size:24px" class="fa">&#xf141;</i>
+                </span>
+
+            </div>
+            <!--- Delete card modal-->
+            <div id="modalConfirmYesNo5" class="modal fade">
+                <div class="modal-dialog " style="height: 15px; width:350px;">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 id="lblTitleConfirmYesNo" class="modal-title" style="font-size: 15px;">Are you sure you
+                                want to delete this post?</h4>
+
+
+                        </div>
+
+                        <div class="modal-footer">
+                            <button id="btnYesConfirm" type="button" class="btn btn-success"
+                                style="margin-right: 200px;" data-dismiss="modal"
+                                onclick="removeCard('card5')">Yes</button>
+                            <button id="btnNoConfirmYesNo" type="button" class="btn btn-danger"
+                                data-dismiss="modal">No</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <!-- post 5 ends here -->
+
+
+
+
+
+    </div>
+    <!-- list of all posts ends here -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+    <script src="../scripts/postslist.js"></script>
+</body>
+
+</html>
